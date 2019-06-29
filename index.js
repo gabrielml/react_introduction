@@ -1,5 +1,14 @@
+class Human extends React.Component {
+	render() {
+		return (
+			<div>
+				<p>Hello World!</p>
+			</div>
+		);
+	}
+}
 
 ReactDOM.render(
-	<h1> Hello, React! </h1>,
+	<Human/>,
 	document.getElementById('root')
 );
