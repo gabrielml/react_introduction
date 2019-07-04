@@ -21,9 +21,9 @@ class App extends Component {
     render() {
         return (
           <div>
-            <Fruit name = {this.state.fruits[0].name} cost = {this.state.fruits[0].cost} />
-            <Fruit name = {this.state.fruits[1].name} cost = {this.state.fruits[1].cost} />
-            <Fruit name = {this.state.fruits[2].name} cost = {this.state.fruits[2].cost} />
+            {this.state.fruits.map((element, index) => {
+              return <Fruit key={index} name={element.name} cost={element.cost} />
+            })}
           </div>
         );
     }
