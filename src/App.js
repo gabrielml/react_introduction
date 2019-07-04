@@ -4,17 +4,23 @@ import Fruit from '../src/Fruits/Fruit';
 import Food from '../src/Food/Food';
 
 class App extends Component {
+    state = {
+      counter: 0
+    }
+
+    clickHandler = () => {
+      const oldCount = this.state.counter;
+      const newCount = oldCount + 1;
+
+      this.setState({counter: newCount});
+    }
     render() {
         return (
-          //<p> Hello World! </p>
-          // <Greeting/>
           <div>
-            <Fruit name='lemon' cost='$2' />
-            <Fruit name='mango' cost='$3'/>
-            <Fruit name='banana' />
-            <Food name='meat' cost='$7'/>
+            <button onClick = {this.clickHandler}>Clicked!</button>
+            <p>{this.state.counter}</p>
           </div>
-            );
+        );
     }
 }
 
