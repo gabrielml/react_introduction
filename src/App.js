@@ -5,7 +5,11 @@ import Food from '../src/Food/Food';
 
 class App extends Component {
     state = {
-      counter: 0
+      fruits: [
+        {name: 'lemon' , cost: '2'},
+        {name: 'mango' , cost: '3'},
+        {name: 'banana' , cost: '4'}
+      ]
     }
 
     clickHandler = () => {
@@ -17,8 +21,9 @@ class App extends Component {
     render() {
         return (
           <div>
-            <button onClick = {this.clickHandler}>Clicked!</button>
-            <p>{this.state.counter}</p>
+            <Fruit name = {this.state.fruits[0].name} cost = {this.state.fruits[0].cost} />
+            <Fruit name = {this.state.fruits[1].name} cost = {this.state.fruits[1].cost} />
+            <Fruit name = {this.state.fruits[2].name} cost = {this.state.fruits[2].cost} />
           </div>
         );
     }
