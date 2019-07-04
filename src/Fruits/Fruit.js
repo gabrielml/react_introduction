@@ -9,9 +9,10 @@ import React from 'react';
  * functional components called **stateless** and
  * class components called **stateful**
  */
-const Fruit = () => {
+const Fruit = (props) => {
 	return (
-		<p> This is a fruit and it cost $5</p>
+		// <p> This is a fruit and it cost $5</p>
+		<p>This is a {props.name} and it costs {props.cost}</p>
 	)
 }
 

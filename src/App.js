@@ -9,10 +9,10 @@ class App extends Component {
           //<p> Hello World! </p>
           // <Greeting/>
           <div>
-            <Fruit />
-            <Fruit />
-            <Fruit />
-            <Food/>
+            <Fruit name='lemon' cost='$2' />
+            <Fruit name='mango' cost='$3'/>
+            <Fruit name='banana' />
+            <Food name='meat' cost='$7'/>
           </div>
             );
     }
