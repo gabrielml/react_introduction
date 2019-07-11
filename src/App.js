@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Greeting from '../src/Greeting/Greeting';
 import Fruit from '../src/Fruits/Fruit';
 import Food from '../src/Food/Food';
+import DeleteFruit from './Fruits/DeleteFruit';
 
 class App extends Component {
     state = {
@@ -10,7 +11,8 @@ class App extends Component {
         {name: 'mango' , cost: '3'},
         {name: 'banana' , cost: '4'}
       ],
-      clickedCount: 0
+      clickedCount: 0,
+      userText: ''
     }
 
     clickHandler = () => {
@@ -27,6 +29,10 @@ class App extends Component {
       this.setState({clickedCount: newCount});
     }
 
+    onChangeHandler = (event) => {
+      this.setState({userText: event.target.value});
+    }
+
     render() {
         const style = {
           backgroundColor: 'lightblue',
@@ -37,6 +43,7 @@ class App extends Component {
             {this.state.fruits.map((element, index) => {
               return <Fruit key={index} name={element.name} cost={element.cost} clicked={this.itemClicked} />
             })}
+            <DeleteFruit changed={this.onChangeHandler} text={this.state.userText}/>
             <p style={style}>clickedCount = {this.state.clickedCount}</p>
           </div>
         );
