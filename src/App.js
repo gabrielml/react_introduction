@@ -28,12 +28,16 @@ class App extends Component {
     }
 
     render() {
+        const style = {
+          backgroundColor: 'lightblue',
+          textAlign: 'center'
+        }
         return (
           <div>
             {this.state.fruits.map((element, index) => {
               return <Fruit key={index} name={element.name} cost={element.cost} clicked={this.itemClicked} />
             })}
-            <p>clickedCount = {this.state.clickedCount}</p>
+            <p style={style}>clickedCount = {this.state.clickedCount}</p>
           </div>
         );
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Fruit.css';
 
 /**
  * @author Gabriel ML
@@ -11,8 +12,10 @@ import React from 'react';
  */
 const Fruit = (props) => {
 	return (
-		// <p> This is a fruit and it cost $5</p>
-		<p onClick={props.clicked}>This is a {props.name} and it costs {props.cost}</p>
+			// <p> This is a fruit and it cost $5</p>
+		<div className="Fruit" onClick={props.clicked}>
+			<p>This is a {props.name} and it costs {props.cost}</p>
+		</div>
 	)
 }
 

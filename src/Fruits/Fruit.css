@@ -1,0 +1,7 @@
+.Fruit {
+    width: 300px;
+    border: 1px solid #eee;
+    margin: 16px auto;
+    box-shadow: 2px 2px #ccc;
+    text-align: center;
+}
