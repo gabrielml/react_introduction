@@ -12,7 +12,7 @@ import React from 'react';
 const Fruit = (props) => {
 	return (
 		// <p> This is a fruit and it cost $5</p>
-		<p>This is a {props.name} and it costs {props.cost}</p>
+		<p onClick={props.clicked}>This is a {props.name} and it costs {props.cost}</p>
 	)
 }
 

@@ -9,7 +9,8 @@ class App extends Component {
         {name: 'lemon' , cost: '2'},
         {name: 'mango' , cost: '3'},
         {name: 'banana' , cost: '4'}
-      ]
+      ],
+      clickedCount: 0
     }
 
     clickHandler = () => {
@@ -18,12 +19,21 @@ class App extends Component {
 
       this.setState({counter: newCount});
     }
+
+    itemClicked = () => {
+      const oldCount = this.state.clickedCount;
+      const newCount = oldCount + 1;
+
+      this.setState({clickedCount: newCount});
+    }
+
     render() {
         return (
           <div>
             {this.state.fruits.map((element, index) => {
-              return <Fruit key={index} name={element.name} cost={element.cost} />
+              return <Fruit key={index} name={element.name} cost={element.cost} clicked={this.itemClicked} />
             })}
+            <p>clickedCount = {this.state.clickedCount}</p>
           </div>
         );
     }
