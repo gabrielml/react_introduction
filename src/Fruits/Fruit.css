@@ -1,7 +1,45 @@
-.Fruit {
-    width: 300px;
-    border: 1px solid #eee;
-    margin: 16px auto;
-    box-shadow: 2px 2px #ccc;
-    text-align: center;
-}
+    .Fruit {
+        width: 300px;
+        border: 1px solid #eee;
+        margin: 16px auto;
+        box-shadow: 2px 2px #ccc;
+        text-align: center;
+    }
+    
+    .DeleteFruit {
+        padding-top: 10px;
+    }
+    
+    .DeleteFruit input {
+        width: auto;
+        margin-bottom: 5px;
+        border: 2px solid darkred;
+        border-radius: 4px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    .DeleteFruit input:focus {
+        background-color: lightblue;
+    }
+    
+    .DeleteFruit button {
+        background-color: darkred;
+        /* Red */
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    .DeleteFruit button:hover {
+        background-color: #f44336;
+        transition-duration: 0.4s;
+    }
