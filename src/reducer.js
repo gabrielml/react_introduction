@@ -8,6 +8,13 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
+	if(action.type === 'DELETE') {
+		// copy state, delete the element with specified key and return newState
+		return {
+			...state,
+			fruits: state.fruits.filter(f => f.key !== action.key)
+		}
+	}
 	return state;
 }
 export default reducer;

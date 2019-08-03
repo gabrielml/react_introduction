@@ -9,7 +9,8 @@ class Products extends React.Component {
 			return <Product
 				key={fruit.key}
 				name={fruit.name}
-				cost={fruit.cost} />
+				cost={fruit.cost}
+				deleted={() => this.props.deleted(fruit.key)} />
 		})
 		return (
 			<div>
@@ -27,4 +28,10 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps)(Products);
+const dispatchActions = dispatch => {
+	return {
+		deleted: (key) => dispatch({type: 'DELETE' , key: key})
+	}
+}
+
+export default connect(mapStateToProps, dispatchActions)(Products);
